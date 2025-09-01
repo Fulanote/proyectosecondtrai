@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Inicio de Sesión</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a0d00; /* fondo oscuro */
+    }
+
+    header {
+      background-color: #0b0b2b;
+      color: white;
+      padding: 10px 20px;
+      font-style: italic;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 20px;
+    }
+
+    .image-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .login-section {
+      flex: 1;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .login-section h2 {
+      margin-top: 0;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 20px;
+      border: none;
+      background-color: #c0c0c0;
+      color: #000;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-container button {
+      flex: 1;
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #5a5a3d;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .forgot-password a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+      color: black;
+      cursor: pointer;
+    }
+    .button-container a {
+    color: white; /* Cambia el color del texto del enlace a blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+  }
+
+  .button-container a:hover {
+    color: #dcdcdc; /* Cambia el color al pasar el mouse, opcional */
+  }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <strong>Logo</strong>
+  </header>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Team Meeting">
+    </div>
+
+    <div class="login-section">
+      <h2>Iniciar sesión</h2>
+      <input type="email" placeholder="Email" class="input-field">
+      <input type="password" placeholder="Contraseña" class="input-field">
+      <div class="button-container">
+        <button><a href="file:///C:/xampp/htdocs/PROYECTO%20JULIANL%20ADSO/Proyecto%20final%20cowork/registro.html">Registrarse</a></button>
+        <button>Iniciar sesión</button>
+      </div>
+      <div class="forgot-password">
+        Ha olvidado su contraseña? <a href="#">Restaurar contraseña</a>
+      </div>
+      <div class="social-icons">
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-x-twitter"></i>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
