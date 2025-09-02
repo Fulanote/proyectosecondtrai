@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a0b04; /* Color 1(marron) */
+      color: #000;
+    }
+
+    header {
+      background-color: #0f0f3d; /* Color 2(Azul) */
+      padding: 10px 20px;
+      color: white;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .main-container {
+      display: flex;
+      height: calc(100vh - 50px);
+    }
+
+    .image-section {
+      flex: 2;
+      background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .form-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a0b04;
+    }
+
+    .form-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 350px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 20px;
+      background-color: #ccc;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #585e3d; /* Color 3 (Verde/Negro) */
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #434b2f;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Logo
+</header>
+
+<div class="main-container">
+  <div class="image-section"></div>
+  <div class="form-section">
+    <div class="form-box">
+      <h2>Registro de usuario</h2>
+      <input type="text" placeholder="Nombre de usuario">
+      <input type="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Contraseña">
+      <input type="password" id="confirm-password" placeholder="Confirmar contraseña" oninput="validarContraseñas()">
+      <div id="error" class="error-message">⚠️ Las contraseñas no coinciden</div>
+      <button onclick="registrarse()">Registrarse</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function validarContraseñas() {
+    const pass1 = document.getElementById("password").value;
+    const pass2 = document.getElementById("confirm-password").value;
+    const error = document.getElementById("error");
+
+    if (pass2 === "") {
+      error.style.display = "none";
+    } else if (pass1 !== pass2) {
+      error.style.display = "block";
+    } else {
+      error.style.display = "none";
+    }
+  }
+
+  function registrarse() {
+    const pass1 = document.getElementById("password").value;
+    const pass2 = document.getElementById("confirm-password").value;
+
+    if (pass1 !== pass2) {
+      alert("Las contraseñas no coinciden.");
+    } else {
+      alert("Registro exitoso.");
+    }
+  }
+</script>
+
+</body>
+</html>
